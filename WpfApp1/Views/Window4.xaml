@@ -1,0 +1,253 @@
+﻿<Window x:Class="WpfApp1.Views.Window4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        Title="Window4"
+        WindowStartupLocation="CenterScreen"
+        
+        xmlns:Ctrl="clr-namespace:WpfApp1.Controls"
+        xmlns:VM="clr-namespace:WpfApp1.ViewModels"
+        xmlns:Model="clr-namespace:WpfApp1.Models"
+        
+        
+        Height="850" Width="1000" 
+        Background="#FFD8CDBA" 
+        Foreground="#FF091788"
+        FontSize="24" 
+        FontFamily="Comic Sans MS">
+    <Window.Resources>
+        <VM:Window1ViewModel x:Key="people"/>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer 
+        HorizontalScrollBarVisibility="Auto"
+        VerticalScrollBarVisibility="Auto">
+        <Grid ShowGridLines="True"
+              DataContext="{StaticResource people}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                >
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:CustomControl1 x:Name="CustCtrl"
+                                         Id="{Binding Person4.Id}"
+                                       Age="{Binding Person4.Age}"
+                                       Gender="{Binding Person4.Gender}"
+                                       Irum="{Binding Person4.Name}"/>
+                </Border>
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Padding="5"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:PersonButton Content="{Binding Person1.Name}"
+                                       Id="{Binding Person1.Id}"
+                                       Age="{Binding Person1.Age}"
+                                       Gender="{Binding Person1.Gender}"
+                                       Irum="{Binding Person1.Name}"
+                                       Click="PersonButton_Click"
+                                       CustomClick="PersonButton_CustomClick"
+                                       RealCustomClick="PersonButton_RealCustomClick"/>
+                </Border>
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Padding="5"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:PersonButton Content="{Binding Person2.Name}"
+                                       Id="{Binding Person2.Id}"
+                                       Age="{Binding Person2.Age}"
+                                       Gender="{Binding Person2.Gender}"
+                                       Irum="{Binding Person2.Name}"
+                                       Click="PersonButton_Click_1"
+                                       RealCustomClick="PersonButton_RealCustomClick_1"/>
+                </Border>
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Padding="5"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:PersonButton Content="{Binding Person3.Name}"
+                                       Id="{Binding Person3.Id}"
+                                       Age="{Binding Person3.Age}"
+                                       Gender="{Binding Person3.Gender}"
+                                       Irum="{Binding Person3.Name}"
+                                       Click="PersonButton_Click_2"
+                                       RealCustomClick="PersonButton_RealCustomClick_2"
+                                       RealWorldCustomClick="PersonButton_RealWorldCustomClick"/>
+                </Border>
+            </StackPanel>
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                >
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:CustomControl2/>
+                </Border>
+            </StackPanel>
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="2"
+                >
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Ctrl:CustomControl3/>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="0"
+                        Grid.Column="2">
+                <Border BorderBrush="Gray"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="Transparent">
+                    <StackPanel Background="Transparent">
+                        <Border CornerRadius="15"
+                                BorderBrush="Red"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="MVVM Test3"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Red"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label 
+                                       Height="36"
+                                       Background="White"
+                                       Content="asasasasaaa"/>
+                                <Button Content="MVVM Test4"
+                                        Click="Button_Click"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Red"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="MVVM Test2"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Red"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="MVVM Test"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Purple"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="Command1 Test"
+                                        IsEnabled="False"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Tomato"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="Command1 Test"
+                                        IsEnabled="False"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        <Border CornerRadius="15"
+                                BorderBrush="Blue"
+                                BorderThickness="3"
+                                Margin="10">
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="10,0">
+                                <Label Width="5"
+                                       Height="36"
+                                       Background="White"/>
+                                <Button Content="Command1 Test"
+                                        IsEnabled="False"
+                                        Margin="0,10,10,10"/>
+                            </StackPanel>
+                            
+                        </Border>
+                        
+                        
+                    </StackPanel>
+                    
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="2"
+                        Grid.Column="0">
+                <Label Content="Test"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+                <Button Content="{Binding Person5.Name}"
+                        Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

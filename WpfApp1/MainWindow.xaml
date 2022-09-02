@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="btnGrid">
+        <!--
+        <Path Data="M137.03008,105.84451 C112.40402,117.07745 114.5862,117.04815 99.81203,151.5212 90.546021,173.14189 74.697018,190.5623 89.661654,217.49865 106.03157,246.9645 153.69571,241.18286 192.85714,241.18286 229.36446,241.18286 246.99248,246.08258 246.99248,181.97233 246.99248,170.96289 250.37594,157.64194 250.37594,144.75429 250.37594,127.17679 242.59666,119.38281 233.45865,104.15278 217.87691,78.183225 197.84205,71.575707 160.71429,66.934737 122.22339,62.123375 125.09802,62.644178 94.736842,99.077594 76.12654,121.40996 69.360902,140.7395 69.360902,173.51368 69.360902,188.16407 65.887123,200.40071 72.744361,214.11519 78.059716,224.7459 82.983451,231.97593 91.353383,241.18286 121.92956,274.81665 135.72024,280.77724 187.78195,290.24301 228.09381,297.57243 247.50119,306.41499 282.5188,278.4009 295.43638,268.06684 305.34783,263.39845 316.35338,249.6415 326.52512,236.92684 329.75545,222.96914 334.96241,207.34827 343.83744,180.72318 345.72421,150.12833 333.27068,121.07008 318.44873,86.485542 303.65453,75.072104 263.90977,60.16782 229.90548,47.41621 208.61279,39.867068 170.86466,39.867068 130.89955,39.867068 134.6041,37.971936 101.50376,66.934737" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="259" Margin="68,40,0,0" Stroke="Black" Stretch="Fill" VerticalAlignment="Top" Width="275">
+            <b:Interaction.Behaviors>
+                <b:MouseDragElementBehavior/>
+            </b:Interaction.Behaviors>
+        </Path>
+
+        <Ellipse HorizontalAlignment="Left" Height="169" Margin="565,130,0,0" Stroke="Black" VerticalAlignment="Top" Width="95">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFEFD4D4" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+            <b:Interaction.Behaviors>
+                <b:MouseDragElementBehavior/>
+            </b:Interaction.Behaviors>
+        </Ellipse>
+        
+        <Button Content="Btn Command" 
+                HorizontalAlignment="Left"
+                Margin="375,99,0,0" 
+                VerticalAlignment="Top" 
+                Width="175" Height="59" 
+                Foreground="#FF2CCE00" 
+                FontSize="20" 
+                FontFamily="Consolas" 
+                Click="Button_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="25"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>-->
+    </Grid>
+</Window>

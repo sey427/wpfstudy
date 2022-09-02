@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp1.Views.Window8"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:WpfApp1.ViewModels"
+        mc:Ignorable="d"
+        Title="Window8" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:Window8ViewModel/>
+    </Window.DataContext>
+    <StackPanel Margin="10">
+        <TextBlock Text="first name"/>
+        <TextBox Text="{Binding FirstName}"/>
+        <TextBlock Text="last name"/>
+        <TextBox Text="{Binding LastName}"/>
+        <TextBlock Text="{Binding FullName}"/>
+        <Button Content="submit" Command="{Binding SubmitCommand}"/>
+    </StackPanel>
+</Window>

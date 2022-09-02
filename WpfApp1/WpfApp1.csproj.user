@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\DataGridControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\UserControl1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\UserControl2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\UserControl3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\UserControl4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\ListControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window4.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window5.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window6.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window7.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Window8.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\DataGridControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\UserControl1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\UserControl2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\UserControl3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\UserControl4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ListControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window5.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window6.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window7.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window8.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

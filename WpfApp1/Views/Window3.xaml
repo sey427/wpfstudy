@@ -1,0 +1,367 @@
+﻿<Window x:Class="WpfApp1.Views.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Title="Window3"
+        
+        xmlns:Model="clr-namespace:WpfApp1.Models"
+        xmlns:VM="clr-namespace:WpfApp1.ViewModels"
+        xmlns:Ctrl="clr-namespace:WpfApp1.Controls"
+        xmlns:RemCtrl="clr-namespace:WpfControlLibrary1;assembly=WpfControlLibrary1"
+        
+        Height="850" Width="1000" 
+        Background="#FFD8CDBA" 
+        Foreground="#FF091788"
+        FontSize="24" 
+        FontFamily="Comic Sans MS">
+    <Window.Resources>
+        <Model:Person x:Key="person12" Id="123" Age="59" Name="chan123" Gender="True"/>
+        <VM:Window1ViewModel x:Key="vmSet"/>
+    </Window.Resources>
+    <ScrollViewer 
+        HorizontalScrollBarVisibility="Auto"
+        VerticalScrollBarVisibility="Auto">
+        <Grid
+            ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0"
+                        Grid.Column="0">
+                <Border BorderBrush="Red"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="AliceBlue">
+                    <Grid DataContext="{StaticResource vmSet}" 
+            ShowGridLines="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                            <!--<RemCtrl:UserControl1/>-->
+                            <!--<ListBox ItemsSource="{Binding}"/>-->
+                            <Border BorderBrush="Cornsilk"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:DataGridControl/>
+                            </Border>
+                            <Border BorderBrush="AliceBlue"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl2/>
+                            </Border>
+                            <!--<Border >
+                    <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Top" CanUserAddRows="False" CanUserDeleteRows="False"/>    
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel Grid.Row="2"
+                        Grid.Column="0"
+                        Orientation="Horizontal">
+                            <Border BorderBrush="DarkBlue"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:ListControl/>
+                            </Border>
+                            <!--<RemCtrl:UserControl1/>-->
+                            <Border BorderBrush="Aquamarine"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl3/>
+                            </Border>
+                            <!--<Border>
+                    <ListBox ItemsSource="{Binding}"/>    
+                </Border>-->
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"
+                        Grid.Column="1">
+                            <Border BorderBrush="Black"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Padding="10">
+                                <RemCtrl:UserControl1/>
+                            </Border>
+
+
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                >
+                            <Border BorderBrush="Tomato"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl4/>
+                            </Border>
+
+                            <!--<Border Margin="10">
+                    <TextBlock
+                    Text="{Binding Person1}"/>
+                </Border>
+                <Border Margin="10"
+                       >
+                    <TextBlock 
+                    Text="{Binding Person2}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                >
+                            <Ctrl:UserControl1/>
+                            <!--<Border Margin="10">
+                    <TextBlock
+                    Text="{Binding Person1}"/>
+                </Border>
+                <Border Margin="10"
+                       >
+                    <TextBlock 
+                    Text="{Binding Person2}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                >
+                            <Border BorderBrush="GreenYellow"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:UserControl4/>
+                            </Border>
+                            <!--<Border Margin="10">
+                    <TextBlock x:Name="firstText"
+                    Text="{Binding}"/>
+                </Border>
+                <Border Margin="10"
+                        x:Name="firstBorder">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+            </StackPanel>
+            <StackPanel Grid.Row="0"
+                        Grid.Column="1">
+                <Border BorderBrush="Tomato"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Background="Aquamarine">
+                    <Grid DataContext="{StaticResource vmSet}" 
+            ShowGridLines="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        Orientation="Horizontal">
+                            <!--<RemCtrl:UserControl1/>-->
+                            <!--<ListBox ItemsSource="{Binding}"/>-->
+                            <Border BorderBrush="Cornsilk"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:DataGridControl/>
+                            </Border>
+                            <Border BorderBrush="AliceBlue"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl2/>
+                            </Border>
+                            <!--<Border >
+                    <DataGrid ItemsSource="{Binding}" HorizontalAlignment="Left" VerticalAlignment="Top" CanUserAddRows="False" CanUserDeleteRows="False"/>    
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel Grid.Row="2"
+                        Grid.Column="0"
+                        Orientation="Horizontal">
+                            <Border BorderBrush="DarkBlue"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:ListControl/>
+                            </Border>
+                            <!--<RemCtrl:UserControl1/>-->
+                            <Border BorderBrush="Aquamarine"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl3/>
+                            </Border>
+                            <!--<Border>
+                    <ListBox ItemsSource="{Binding}"/>    
+                </Border>-->
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1"
+                        Grid.Column="1">
+                            <Border BorderBrush="Black"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10"
+                        Padding="10">
+                                <RemCtrl:UserControl1/>
+                            </Border>
+
+
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="1"
+                Grid.Column="0"
+                >
+                            <Border BorderBrush="Tomato"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <RemCtrl:UserControl4/>
+                            </Border>
+
+                            <!--<Border Margin="10">
+                    <TextBlock
+                    Text="{Binding Person1}"/>
+                </Border>
+                <Border Margin="10"
+                       >
+                    <TextBlock 
+                    Text="{Binding Person2}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                >
+                            <Ctrl:UserControl1/>
+                            <!--<Border Margin="10">
+                    <TextBlock
+                    Text="{Binding Person1}"/>
+                </Border>
+                <Border Margin="10"
+                       >
+                    <TextBlock 
+                    Text="{Binding Person2}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+                        <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                >
+                            <Border BorderBrush="GreenYellow"
+                        CornerRadius="15"
+                        BorderThickness="3"
+                        Margin="10">
+                                <Ctrl:UserControl4/>
+                            </Border>
+                            <!--<Border Margin="10">
+                    <TextBlock x:Name="firstText"
+                    Text="{Binding}"/>
+                </Border>
+                <Border Margin="10"
+                        x:Name="firstBorder">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>
+                <Border Margin="10">
+                    <TextBlock 
+                    Text="{Binding Person3}"/>
+                </Border>
+                <Border Margin="10"
+                        DataContext="{StaticResource person12}">
+                    <TextBlock 
+                    Text="{Binding}"/>
+                </Border>-->
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Grid>
+        
+    </ScrollViewer>
+</Window>
+
